@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
+
 
 import Logo from "../../static/assets/logo.png";
 import { getSingleDecimalValue } from "../../redux/movies/movieUtil";
@@ -33,13 +33,14 @@ const SearchDropdownItem = ({ collection }) => {
         <div className={"rating-container"}>
           <div className="rating">
             {getSingleDecimalValue(vote_average)}
-            <FontAwesomeIcon icon={faStar} size="sm" />
-          </div>
+            <StarRateRoundedIcon/> 
+            </div>
           <WatchlistBtn collectionItem={collection} selected={selected} />
         </div>
       </div>
     </div>
   );
 };
+
 
 export default SearchDropdownItem;

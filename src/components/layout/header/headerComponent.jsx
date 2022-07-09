@@ -3,7 +3,7 @@ import { useMatch } from "react-router-dom";
 
 import { useWindowSize } from "../../../redux/movies/movieUtil";
 
-import NavBar from "./navbar/navbarComponent";
+import NavigBar from "./navbar/nav/navComponent";
 
 const Header = () => {
   const [windowWidth] = useWindowSize();
@@ -22,7 +22,7 @@ const Header = () => {
           : "header"
       }`}
     >
-      <NavBar />
+      <NavigBar />
     </div>
   );
 };
